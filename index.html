@@ -26,7 +26,7 @@
         <div
           class="bg-yellow-100 flex flex-col md:flex-row lg:flex-row justify-center"
         >
-          <div class="w-[100%] text-center py-16 my-10">
+          <div id="" class="w-[100%] text-center py-16 my-10">
             <h3 class="text-2xl">---SALE FEVER---</h3>
             <h2 class="text-3xl">
               Purchase TK 200 or <br />
@@ -53,11 +53,12 @@
       <h2 class="text-2xl my-5 mx-5 py-3 pt-8 bold">Kitchenware</h2>
       <div class="mx-5 my-5 flex-1 flex flex-col lg:flex-row">
         <!-- Kitchenware item cards -->
-        <div
-          class="flex-1 pb-4 gap-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-        >
+        <div class="flex-1 pb-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <!-- first card -->
-          <div class="card w-[200px] h-[300px] bg-white shadow-xl">
+          <div
+            id="k-first-card"
+            class="card w-[200px] h-[300px] bg-white shadow-xl"
+          >
             <figure class="px-10 pt-10 bg-slate-100 rounded">
               <img src="./images/prod1.png" alt="Shoes" class="rounded-xl" />
             </figure>
@@ -69,7 +70,7 @@
                 <i> <img src="./images/Frame (2).svg" alt="" /></i>
               </ul>
               <h1 class="text-2xl">K.Accessories</h1>
-              <p>39.00 TK</p>
+              <p><span id="first-card-amount">39</span>.00TK</p>
             </div>
           </div>
           <!-- second card -->
@@ -108,7 +109,7 @@
 
         <!-- balance calculation section -->
         <div>
-          <div class="w-[250px] h-[400px] bg-white text-center py-2 rounded-lg">
+          <div class="w-[300px] h-[400px] bg-white text-center py-2 rounded-lg">
             <h1>Have coupon?</h1>
             <input
               placeholder="coupon code"
@@ -124,9 +125,11 @@
               <!-- price calculate -->
 
               <div class="border-b-2">
-                <h2 class="text-2xl">Total price: <span>00</span>tk</h2>
+                <h2 class="text-2xl">
+                  Total price: <span id="total-price">00</span>tk
+                </h2>
                 <h2 class="text-2xl">discount: <span>00</span>tk</h2>
-                <h2 class="text-2xl">Total: <span>00</span>tk</h2>
+                <h2 class="text-2xl">Total: <span id="Total">00</span>tk</h2>
               </div>
               <button
                 class="text-2xl py-1 px-2 bg-[#E527B2] rounded-md text-white mt-3"
@@ -194,5 +197,6 @@
         </div>
       </section>
     </main>
+    <script src="js/script.js"></script>
   </body>
 </html>
