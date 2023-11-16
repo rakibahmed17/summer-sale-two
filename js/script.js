@@ -13,6 +13,20 @@ function setTextAmount(elementId, newValue) {
 
 
 
+function itemNames(nameType) {
+                  const itemNamesEntry = document.getElementById('item-entry');
+                  const count = itemNamesEntry.childElementCount;
+
+                  const p = document.createElement('p');
+                  p.innerHTML = ` ${count + 1}.${nameType} `
+                  itemNamesEntry.appendChild(p);
+
+
+
+};
+
+
+
 // first kitchens items card
 document.getElementById('k-first-card').addEventListener('click', function () { 
                   const textAmount = cardElementText('first-card-amount');
@@ -23,6 +37,7 @@ document.getElementById('k-first-card').addEventListener('click', function () {
                   setTextAmount('total-price', Amount);
                   const grandAmount = textAmount + amountTotal;
                   setTextAmount('Total', grandAmount);
+                  itemNames("K. Accessories");
                   
 });
 
@@ -36,6 +51,7 @@ document.getElementById('k-second-card').addEventListener('click', function () {
                   setTextAmount('total-price', secondAmount);
                   const secondGrantAmount = secondTextAmount + secondAmountTotal;
                   setTextAmount('Total', secondGrantAmount);
+                  itemNames('K. Accessories');
 });
 // third kitchens items card
 document.getElementById('k-third-card').addEventListener('click', function () {
@@ -46,6 +62,7 @@ document.getElementById('k-third-card').addEventListener('click', function () {
                   setTextAmount("total-price", thirdAmount);
                   const grandThirdAmount = thirdTextAmount + thirdAmountTotal;
                   setTextAmount('Total', grandThirdAmount);
+                  itemNames('Home cooker');
 
 
 });
@@ -62,6 +79,7 @@ document.getElementById('sports-first-card').addEventListener('click', function 
                   setTextAmount('total-price', sportsTotalAmount);
                   const itemTotal = firstSportsItemAmount + sportsItemTotal;
                   setTextAmount('Total', itemTotal);
+                  itemNames("Sports Back Cap")
 
 });
 // spots wears second cads 
@@ -73,6 +91,7 @@ document.getElementById('sports-second-card').addEventListener('click', function
                   setTextAmount('total-price', secondSportsTotalAmount);
                   const itemTotal = secondSportsItemAmount + secondSportsItemTotal;
                   setTextAmount('Total', itemTotal);
+                  itemNames('fully jursy set');
 
 });
 // spots wears third cads 
@@ -84,6 +103,7 @@ document.getElementById('sports-third-card').addEventListener('click', function 
                   setTextAmount('total-price', thirdSportsTotalAmount);
                   const itemTotal = thirdSportsItemAmount + thirdSportsItemTotal;
                   setTextAmount('Total', itemTotal);
+                  itemNames('sports cates set')
 
 });
 
